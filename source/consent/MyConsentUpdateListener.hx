@@ -2,6 +2,7 @@ package consent;
 
 import extension.consent.ConsentStatus;
 import extension.consent.ConsentUpdateListener;
+import extension.consent.Consent;
 
 class MyConsentUpdateListener extends ConsentUpdateListener
 {
@@ -22,6 +23,8 @@ class MyConsentUpdateListener extends ConsentUpdateListener
 	
 	override public function onFailedToUpdateConsentInfo(errorDescription:String):Void {
 		trace("Failed to update consent status from server with error: " + errorDescription);
+		
+		trace("I failed to update consent info, and I'm on thread with id: " + Consent.whatThreadIdIsThis());
 		
 		Main.spamStuff();
 	}

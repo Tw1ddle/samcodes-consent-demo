@@ -9,6 +9,7 @@ import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.system.Capabilities;
 import states.PlayState;
+import extension.consent.Consent;
 
 class Main extends Sprite {
 	var gameWidth:Int = 800; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
@@ -61,6 +62,8 @@ class Main extends Sprite {
 		                     framerate, framerate, skipSplash, startFullscreen));
 		
 		FlxG.fixedTimestep = false;
+		
+		trace("Setting up Flixel in Haxe, and I'm on thread with id: " + Consent.whatThreadIdIsThis());
 		
 		ConsentWrapper.init();
 		ConsentWrapper.requestStatus();

@@ -28,6 +28,9 @@
 	
 	<haxelib name="flixel" />
 	
+	<!-- Consent SDK - to bring a popover up during launch, which may make it crashier -->
+	<haxelib name="samcodes-consent" />
+	
 	<!---------------------------------HAXEDEFINES---------------------------------->
 	
 	<!--Enable this for nape release builds for a serious peformance improvement-->
@@ -57,7 +60,7 @@
 	<haxedef name="FLX_NO_FOCUS_LOST_SCREEN" />
 	
 	<!--Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode!-->
-	<haxedef name="FLX_NO_DEBUG" unless="debug" />
+	<!-- <haxedef name="FLX_NO_DEBUG" unless="debug" /> -->
 	
 	<haxedef name="Dfdb" if="flash"/>
 	

@@ -62,22 +62,7 @@ class SampleSubState extends FlxSubState {
 		FlxG.debugger.visible = !FlxG.debugger.visible;
 	}
 	
-	var spamCount = 0;
-	private function onSpamDebugTextClick():Void {
-		FlxG.log.warn("Save data reports session count of 0. Is this correct?");
-		FlxG.log.notice("Scheduling first conference time");
-		FlxG.log.notice("Current time is: " + Date.fromTime(Date.now().getTime()));
-		FlxG.log.notice("Next business conference is scheduled for: " + null);
-		FlxG.log.notice("Next full moon is scheduled for: " + null);
-		FlxG.log.notice("Checking for conference...");
-		FlxG.log.notice("Conference time has passed...");
-		FlxG.log.error("Getting root state before it is fully created!");
-		
-		for (i in 0...50) {
-			var m = [ "foo" => Math.random() * (Math.random() * 1000) ];
-			FlxG.log.notice(spamCount + ": fgsfds, " + Std.string(m));
-		}
-		
-		spamCount++;
+	public static function onSpamDebugTextClick():Void {
+		Main.spamStuff();
 	}
 }

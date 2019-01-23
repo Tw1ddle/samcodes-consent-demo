@@ -1,0 +1,3 @@
+[submodule "lib/samcodes-consent"]
+	path = lib/samcodes-consent
+	url = https://github.com/Tw1ddle/samcodes-consent

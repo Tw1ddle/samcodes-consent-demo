@@ -2,8 +2,8 @@
 <project>
 	<!------------------------------APPLICATION SETTINGS---------------------------->
 	
-	<meta title="FlxDebuggerCrash" package="uk.co.samcodes.flxdebuggercrash" version="1.0.0" company="Sam Twidale" />
-	<app file="FlxDebuggerCrash" main="Main" />
+	<meta title="SamcodesConsentDemo" package="uk.co.samcodes.consentdemo" version="1.0.0" company="Sam Twidale" />
+	<app file="SamcodesConsentDemo" main="Main" />
 	
 	<!--------------------------------WINDOW SETTINGS------------------------------->
 	

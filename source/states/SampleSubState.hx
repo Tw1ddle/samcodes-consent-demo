@@ -63,6 +63,6 @@ class SampleSubState extends FlxSubState {
 	}
 	
 	public static function onSpamDebugTextClick():Void {
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 	}
 }

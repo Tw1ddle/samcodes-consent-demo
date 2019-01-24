@@ -1,6 +1,7 @@
 package;
 
 import consent.ConsentWrapper;
+import extension.consent.Consent;
 import flash.Lib;
 import flash.display.Sprite;
 import flash.events.Event;
@@ -9,7 +10,6 @@ import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.system.Capabilities;
 import states.PlayState;
-import extension.consent.Consent;
 
 class Main extends Sprite {
 	var gameWidth:Int = 800; // Width of the game in pixels (might be less / more in actual pixels depending on your zoom).
@@ -63,14 +63,15 @@ class Main extends Sprite {
 		
 		FlxG.fixedTimestep = false;
 		
-		trace("Setting up Flixel in Haxe, and I'm on thread with id: " + Consent.whatThreadIdIsThis());
+		trace("Setting up Flixel in Haxe on thread with id: " + Consent.whatThreadIdIsThis());
 		
 		ConsentWrapper.init();
 		ConsentWrapper.requestStatus();
 	}
 	
+	// Reproduces issue
 	private static var spamCount = 0;
-	public static function spamStuff():Void {
+	public static function spamTextToFlxDebugger():Void {
 		FlxG.log.warn("Save data reports session count of 0. Is this correct?");
 		FlxG.log.notice("Scheduling first conference time");
 		FlxG.log.notice("Current time is: " + Date.fromTime(Date.now().getTime()));

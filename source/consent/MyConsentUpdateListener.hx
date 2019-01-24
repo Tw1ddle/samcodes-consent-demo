@@ -1,8 +1,8 @@
 package consent;
 
+import extension.consent.Consent;
 import extension.consent.ConsentStatus;
 import extension.consent.ConsentUpdateListener;
-import extension.consent.Consent;
 
 class MyConsentUpdateListener extends ConsentUpdateListener
 {
@@ -15,7 +15,7 @@ class MyConsentUpdateListener extends ConsentUpdateListener
 	override public function onConsentInfoUpdated(consentStatus:ConsentStatus):Void {
 		trace("Successfully updated consent status from server with status: " + consentStatus.toString());
 		
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 		
 		// Request consent form right away
 		ConsentWrapper.requestConsentForm();
@@ -26,6 +26,6 @@ class MyConsentUpdateListener extends ConsentUpdateListener
 		
 		trace("I failed to update consent info, and I'm on thread with id: " + Consent.whatThreadIdIsThis());
 		
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 	}
 }

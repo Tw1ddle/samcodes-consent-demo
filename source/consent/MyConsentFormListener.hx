@@ -19,24 +19,24 @@ class MyConsentFormListener extends ConsentFormListener
 		var willDisplayForm = Consent.displayConsentForm();
 		trace("Consent form did load, form display attempt returned initial result: " + willDisplayForm);
 		
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 	}
 	
 	override public function onConsentFormOpened():Void {
 		trace("Consent form was opened");
 		
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 	}
 	
 	override public function onConsentFormClosed(consentStatus:ConsentStatus, userPrefersAdFree:Bool):Void {
 		trace("Consent form did close with consent status: " + Std.string(consentStatus.toString()) + " and user ad free preference: " + Std.string(userPrefersAdFree));
 		
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 	}
 	
 	override public function onConsentFormError(errorDescription:String):Void {
 		trace("Consent form error: " + errorDescription);
 		
-		Main.spamStuff();
+		Main.spamTextToFlxDebugger();
 	}
 }

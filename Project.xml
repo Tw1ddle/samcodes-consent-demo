@@ -28,8 +28,9 @@
 	
 	<haxelib name="flixel" />
 	
-	<!-- Consent SDK - to bring a popover up during launch, to make everything crash -->
+	<!-- Include the Consent SDK bindings -->
 	<include path="lib/samcodes-consent" />
+	<!-- <haxelib="samcodes-consent" /> -->
 	
 	<!---------------------------------HAXEDEFINES---------------------------------->
 	

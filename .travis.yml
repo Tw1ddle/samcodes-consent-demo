@@ -1,0 +1,54 @@
+language: haxe
+
+# Add encrypted API key
+env:
+  global:
+    - secure: 
+
+matrix:
+  include:
+    - os: linux
+      sudo: required
+      dist: trusty
+    - os: osx
+      osx_image: xcode9.3
+    
+
+# Blacklist
+branches:
+  only:
+    - master
+
+before_install:
+  - wget http://nmehost.com/releases/hxcpp/hxcpp-3.4.214.zip
+  - haxelib install hxcpp-3.4.214.zip
+
+# Install dependencies
+install:
+  - haxelib install lime
+  - haxelib install openfl
+  - haxelib install flixel
+  - haxelib list
+
+# Build the haxelib, then build the demo
+script:
+  # Build for regular targets with no haxelibs set up
+  - haxelib run openfl build "Project.xml" flash
+  - haxelib run openfl build "Project.xml" html5 -minify -release
+  
+  # Build the haxelib ndlls for iOS
+  - pushd lib/samcodes-consent/project;
+  - chmod +x rebuild_ndlls.sh;
+  - ./rebuild_ndlls.sh;
+  - popd;
+
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then haxelib run openfl build "Project.xml" ios -simulator ; fi
+
+# Deploy the generated demo using Travis builtin GitHub Pages support
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: export/html5/bin
+  github_token: $GITHUB_API_KEY
+  on:
+    branch: master

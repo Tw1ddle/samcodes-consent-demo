@@ -3,7 +3,7 @@ language: haxe
 # Add encrypted API key
 env:
   global:
-    - secure: 
+    - secure: Bzclr4qLWZemArvsSdgBwDBhVmLb4tTg/8dB/1eGQe2hi4UKCVT5+AyAO2yD6/+U5RjlCEMzkEayWpAJj3ZEBtSJDbCPsACRNnfynDgXKdTvC7ulBS8+cSTWdZBupgj1u/PQaBJGkIg9QrZL360qdfdCL1U1HVV2Sezm3KLHNkKHNi09bMwSnM7Gqm6ObrTnmwK2thUsYyWeC8lg8OVaLDPRz4OWTdTV9h2WJO35Bd6ml8dZDEeR/7zooZdyyngEs5TfjSMeA4dPjeu2qdN7C+gg6MkPy5BaEOOAJrh3rHr/ca4kmxPwutPfCA3Bwb0u5C/tHTMJmriKBJJk247XDP2wLvIq7i6rFjt+BUVu0u8MbRnKNqA2sOp4+1dOKHlWurxeMMOyuLSjeEM2hbRZA/LVTH510C27zv14/hGIbukItO9jJLZ230KkNclNuXyRF9bdkvAykYJrufOTBtfUceCO3MzszcdtGXHQugKwWt5XIUYPdZcPH1qe/LzRRs9NwGjF3Kv4YFuBBJPs4NouQqcWLShD1aO/+PlTs2/v9mE8qlk1G0QdUxhD64psUCbLVm0lfnDlTOw40dyNO5FDkJvFbkh1V5/KuPqPwTCa5JqdnHkdGY/8UMVSxZy+N86/af1r+dkodLuKsJk+84mLjvnK+jcAiszKfv1HXYPR3+E=
 
 matrix:
   include:

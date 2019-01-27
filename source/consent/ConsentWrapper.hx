@@ -1,11 +1,12 @@
 package consent;
 
+import states.PlayState;
+
 #if gdprconsent
 
 import consent.MyConsentFormListener;
 import consent.MyConsentUpdateListener;
 import extension.consent.Consent;
-import states.PlayState;
 
 /**
    Wrapper for functionality for figuring out whether users consent to seeing personalized ads etc.

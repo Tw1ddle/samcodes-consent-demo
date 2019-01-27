@@ -32,6 +32,10 @@
 	<include path="lib/samcodes-consent" />
 	<!-- <haxelib="samcodes-consent" /> -->
 	
+	<!-- Some defines so we can isolate the consent SDK stuff to only iOS/Android builds -->
+	<haxedef name="gdprconsent" if="ios" />
+	<haxedef name="gdprconsent" if="android" />
+	
 	<!---------------------------------HAXEDEFINES---------------------------------->
 	
 	<!--Enable this for nape release builds for a serious peformance improvement-->

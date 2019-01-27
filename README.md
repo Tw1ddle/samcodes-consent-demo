@@ -3,8 +3,6 @@
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/samcodes-consent-demo/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/travis/Tw1ddle/samcodes-consent-demo.svg?style=flat-square)](https://travis-ci.org/Tw1ddle/samcodes-consent-demo)
 
-WORK IN PROGRESS
-
 Demo of Google Mobile Ads [Consent SDK bindings](https://github.com/Tw1ddle/samcodes-consent) for Android and iOS Haxe OpenFL targets.
 
 ## Usage

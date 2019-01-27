@@ -37,10 +37,12 @@ script:
   - haxelib run openfl build "Project.xml" html5 -minify -release
   
   # Build the haxelib ndlls for iOS
-  - pushd lib/samcodes-consent/project;
-  - chmod +x rebuild_ndlls.sh;
-  - ./rebuild_ndlls.sh;
-  - popd;
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+    pushd lib/samcodes-consent/project;
+    chmod +x rebuild_ndlls.sh;
+    ./rebuild_ndlls.sh;
+    popd;
+    fi
 
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then haxelib run openfl build "Project.xml" ios -simulator ; fi
 

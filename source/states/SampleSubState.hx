@@ -14,6 +14,7 @@ class SampleSubState extends FlxSubState {
 	private var buttonsGroup:FlxTypedSpriteGroup<TextButton>;
 	private var requestConsentStatusButton:TextButton;
 	private var userInEEAButton:TextButton;
+	private var loadConsentFormButton:TextButton;
 	private var showConsentFormButton:TextButton;
 	private var clearTextLogButton:TextButton;
 	
@@ -35,12 +36,13 @@ class SampleSubState extends FlxSubState {
 
 			requestConsentStatusButton = new TextButton(0, 0, "Request Consent Status", onRequestConsentStatusClick);
 			userInEEAButton = new TextButton(0, 0, "Is User In EEA", onUserInEEAButtonClick);
+			loadConsentFormButton = new TextButton(0, 0, "Load Consent Form", onLoadConsentFormButtonClick);
 			showConsentFormButton = new TextButton(0, 0, "Show Consent Form", onShowConsentFormButtonClick);
 			clearTextLogButton = new TextButton(0, 0, "Clear Text Log", onClearTextLogClick);
 
 			var buttons:Array<TextButton> = [];
 			
-			buttons = [requestConsentStatusButton, userInEEAButton, showConsentFormButton, clearTextLogButton];
+			buttons = [requestConsentStatusButton, userInEEAButton, loadConsentFormButton, showConsentFormButton, clearTextLogButton];
 			
 			var x:Float = 0;
 			for (button in buttons) {
@@ -83,9 +85,14 @@ class SampleSubState extends FlxSubState {
 		game.addText("Will check if user is in the EEA: " + ConsentWrapper.isUserInEEAOrUnknown());
 	}
 	
-	private function onShowConsentFormButtonClick():Void {
-		game.addText("Will request to show the consent form");
+	private function onLoadConsentFormButtonClick():Void {
+		game.addText("Will request to load the consent form");
 		ConsentWrapper.requestConsentForm();
+	}
+	
+	private function onShowConsentFormButtonClick():Void {
+		game.addText("Will request so show the consent form");
+		ConsentWrapper.displayConsentForm();
 	}
 	
 	private function onClearTextLogClick():Void {

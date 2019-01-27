@@ -13,7 +13,7 @@ import states.PlayState;
 class ConsentWrapper
 {
 	private static var updateListener:MyConsentUpdateListener;
-	private static var consentListener:MyConsentFormListener;
+	private static var consentFormListener:MyConsentFormListener;
 	
 	public static var listenerMessages:Array<String> = []; // Messages from the listeners
 	public static var admobPublisherId = "TODO"; // Your AdMob publisher id here
@@ -21,10 +21,10 @@ class ConsentWrapper
 	// Setup listeners
 	public static function init(game:PlayState):Void {
 		updateListener = new MyConsentUpdateListener(game);
-		consentListener = new MyConsentFormListener(game);
+		consentFormListener = new MyConsentFormListener(game);
 		
 		Consent.setConsentUpdateListener(updateListener);
-		Consent.setConsentFormListener(consentListener);
+		Consent.setConsentFormListener(consentFormListener);
 	}
 	
 	public static function requestStatus():Void {

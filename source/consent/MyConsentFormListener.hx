@@ -17,11 +17,7 @@ class MyConsentFormListener extends ConsentFormListener
 	// Note that the consent form has to be successfully loaded before we will be able to open it
 	
 	override public function onConsentFormLoaded():Void {
-		
-		// Open/display the consent form right after it loads
-		var willDisplayForm = Consent.displayConsentForm();
-
-		ConsentWrapper.listenerMessages.push("Consent form did load, form display attempt returned initial result: " + willDisplayForm);
+		ConsentWrapper.listenerMessages.push("Consent form did load");
 	}
 	
 	override public function onConsentFormOpened():Void {

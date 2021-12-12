@@ -1,9 +1,10 @@
 # Haxe GDPR Consent Demo
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/samcodes-consent-demo/blob/master/LICENSE)
-[![Build Status](https://img.shields.io/travis/Tw1ddle/samcodes-consent-demo.svg?style=flat-square)](https://travis-ci.org/Tw1ddle/samcodes-consent-demo)
+[![License](https://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/samcodes-consent-demo/blob/master/LICENSE)
 
 Demo of Google Mobile Ads [Consent SDK bindings](https://github.com/Tw1ddle/samcodes-consent) for Android and iOS Haxe OpenFL targets.
+
+*This is deprecated* - I am no longer updating it because I do not currently use ads requiring GDPR consent in my projects. Feel free to fork this and bring it up to date though!
 
 ## Usage
 
